@@ -1,8 +1,9 @@
 {
     "domain": "homey",
-    "name": "homey",
+    "name": "Homey compound device for Home Assistant app",
 	"version": "1.0.0",	
     "documentation": "https://github.com/RonnyWinkler/homeassistant.homey",
+	"issue_tracker": "https://github.com/RonnyWinkler/homeassistant.homey/issues"
     "requirements": [],
     "dependencies": [],
     "codeowners": [
