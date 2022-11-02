@@ -1,20 +1,14 @@
 name: Validate with hassfest
 
 on:
-  pull_request:
-    branches: ["main"]
   push:
-    branches: ["main"]
+  pull_request:
   schedule:
-    - cron:  '0 0 * * *'
-    
+    - cron: "0 0 * * *"
+
 jobs:
-  hassfest:
-    runs-on: ubuntu-latest
-    name: hassfest
+  validate:
+    runs-on: "ubuntu-latest"
     steps:
-      - name: Check out the repository
-        uses: actions/checkout@v3
-      
-      - name: Test hassfest
-        uses: ./hassfest
+      - uses: "actions/checkout@v2"
+      - uses: RonnyWinkler/homeassistant.homey@main
