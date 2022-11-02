@@ -4,7 +4,9 @@
 	"integration_type": "entity",
 	"version": "1.0.0",	
     "documentation": "https://github.com/RonnyWinkler/homeassistant.homey",
-	"issue_tracker": "https://github.com/RonnyWinkler/homeassistant.homey/issues"
+	"issue_tracker": "https://github.com/RonnyWinkler/homeassistant.homey/issues",
+    "requirements": [],
+    "dependencies": [],
     "codeowners": [
         "@RonnyWinkler"
     ]
