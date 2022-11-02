@@ -1,13 +1,11 @@
 # Homey-Integration: Compound device definition for Home-Assistant
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg?style=flat-square)](https://github.com/hacs)
-[![GH-release](https://img.shields.io/github/v/release/benct/lovelace-multiple-entity-row.svg?style=flat-square)](https://github.com/RonnyWinkler/homeassistant.homey/releases)
-[![GH-downloads](https://img.shields.io/github/downloads/benct/lovelace-multiple-entity-row/total?style=flat-square)](https://github.com/RonnyWinkler/homeassistant.homey/releases)
-[![GH-last-commit](https://img.shields.io/github/last-commit/benct/lovelace-multiple-entity-row.svg?style=flat-square)](https://github.com/RonnyWinkler/homeassistant.homey/commits/master)
-[![GH-code-size](https://img.shields.io/github/languages/code-size/benct/lovelace-multiple-entity-row.svg?color=red&style=flat-square)](https://github.com/RonnyWinkler/homeassistant.homey)
+[![GH-release](https://img.shields.io/github/v/release/RonnyWinkler/homeassistant.homey.svg?style=flat-square)](https://github.com/RonnyWinkler/homeassistant.homey/releases)
+[![GH-downloads](https://img.shields.io/github/downloads/RonnyWinkler/homeassistant.homey/total?style=flat-square)](https://github.com/RonnyWinkler/homeassistant.homey/releases)
+[![GH-last-commit](https://img.shields.io/github/last-commit/RonnyWinkler/homeassistant.homey.svg?style=flat-square)](https://github.com/RonnyWinkler/homeassistant.homey/commits/master)
+[![GH-code-size](https://img.shields.io/github/languages/code-size/RonnyWinkler/homeassistant.homey.svg?color=red&style=flat-square)](https://github.com/RonnyWinkler/homeassistant.homey)
 <a href="https://paypal.me/winklerronny"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" height="20"></a>
-
-
 
 HowTo use the compounds component in HA to create entity groups.
 

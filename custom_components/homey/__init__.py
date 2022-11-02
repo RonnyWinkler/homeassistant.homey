@@ -1,6 +1,6 @@
 import asyncio
-import logging
 import json
+import logging
 
 import voluptuous as vol
 
