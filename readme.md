@@ -72,9 +72,11 @@ plug:
 
 ## Use Icons
 You can set an icon for your compound device:
+```yaml
 livingroom_compound:
   name: Livingroom environment
   icon: measure_temperature
+```
 
 Possible icons:
 - alarm_contact
@@ -98,6 +100,49 @@ Possible icons:
 - measure_temperature
 - measure_voltage
 - meter_power
+
+Possible capabilities:
+- onoff
+- button
+- locked
+- dim (as slider for input_number.set_value
+- alarm_battery
+- alarm_co
+- alarm_co2
+- alarm_contact
+- alarm_fire
+- alarm_generic
+- alarm_heat
+- alarm_motion
+- alarm_pm25
+- alarm_smoke
+- alarm_tamper
+- alarm_water
+- measure_generic
+- measure_numeric
+- measure_battery
+- measure_co
+- measure_co2
+- measure_current
+- measure_gust_angle
+- measure_gust_strength
+- measure_humidity
+- measure_luminance
+- measure_noise
+- measure_pm25
+- measure_power
+- measure_pressure
+- measure_rain
+- measure_temperature
+- measure_ultraviolet
+- measure_voltage
+- measure_water
+- measure_wind_angle
+- measure_wind_strength
+- meter_gas
+- meter_water
+- meter_power
+- meter_rain
 
 
 ## References
