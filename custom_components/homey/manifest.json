@@ -2,7 +2,7 @@
     "domain": "homey",
     "name": "Homey compound device for Home Assistant app",
 	"integration_type": "entity",
-	"version": "1.0.0",	
+	"version": "1.0.1",	
     "documentation": "https://github.com/RonnyWinkler/homeassistant.homey",
 	"issue_tracker": "https://github.com/RonnyWinkler/homeassistant.homey/issues",
     "requirements": [],

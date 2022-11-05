@@ -18,6 +18,7 @@ ENTITY_ID_FORMAT = DOMAIN + '.{}'
 CONF_ICON = "icon"
 CONF_CAPABILITIES = "capabilities"
 CONF_CAPABILITIES_TITLES = "capabilitiesTitles"
+CONF_CAPABILITIES_UNITS = "capabilitiesUnits"
 CONF_CAPABILITIES_CONVERTERS = "capabilitiesConverters"
 
 CONFIG_SCHEMA = vol.Schema({
@@ -27,6 +28,7 @@ CONFIG_SCHEMA = vol.Schema({
             vol.Optional(CONF_ICON): cv.string,
             vol.Optional(CONF_CAPABILITIES): dict,
             vol.Optional(CONF_CAPABILITIES_TITLES): dict,
+            vol.Optional(CONF_CAPABILITIES_UNITS): dict,
             vol.Optional(CONF_CAPABILITIES_CONVERTERS): dict
         }, None)
     })
@@ -47,9 +49,10 @@ def async_setup(hass, config):
         icon = device_config.get(CONF_ICON)
         capabilities = device_config.get(CONF_CAPABILITIES)
         capabilitiesTitles = device_config.get(CONF_CAPABILITIES_TITLES)
+        capabilitiesUnits = device_config.get(CONF_CAPABILITIES_UNITS)
         capabilitiesConverters = device_config.get(CONF_CAPABILITIES_CONVERTERS)
 
-        devices.append(Device(device_id, name, icon, capabilities, capabilitiesTitles, capabilitiesConverters))
+        devices.append(Device(device_id, name, icon, capabilities, capabilitiesTitles, capabilitiesUnits, capabilitiesConverters))
 
     yield from component.async_add_entities(devices)
     return True
@@ -57,13 +60,14 @@ def async_setup(hass, config):
 class Device(Entity):
     """Representation of a homey device."""
 
-    def __init__(self, device_id, name, icon, capabilities, capabilitiesTitles, capabilitiesConverters):
+    def __init__(self, device_id, name, icon, capabilities, capabilitiesTitles, capabilitiesUnits, capabilitiesConverters):
         """Initialize a homey device."""
         self.entity_id = ENTITY_ID_FORMAT.format(device_id)
         self._name = name
         self._icon = icon
         self._capabilities = capabilities
         self._capabilitiesTitles = capabilitiesTitles
+        self._capabilitiesUnits = capabilitiesUnits
         self._capabilitiesConverters = capabilitiesConverters
 
     @asyncio.coroutine
@@ -98,5 +102,6 @@ class Device(Entity):
             "icon": self._icon,
             "capabilities": self._capabilities,
             "capabilitiesTitles": self._capabilitiesTitles,
+            "capabilitiesUnits": self._capabilitiesUnits,
             "capabilitiesConverters": self._capabilitiesConverters
         }
