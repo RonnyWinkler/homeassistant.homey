@@ -9,19 +9,21 @@
 
 HowTo use the compounds component in HA to create entity groups.
 
-##Install the component in HomeAssistant
+## Install the component in HomeAssistant
+
 1) Install this component in HACS... or copy the folder "homey" to your HomeAssistant custom_components folder (/config/custom_components/homey).
 2) Restart HomeAssistant to activate the component
 
 
-##Prepare the YAML file
+## Prepare the YAML file
+
 Copy an example into your configuration.yaml. Or copy the include into the file "homey.yaml" and add this line to your configuration.yaml:
 ```yaml
 homey: !include homey.yaml
 ```
 Restart HomeAssistant after YAML changes.
 
-##Customize the YAML file to define entity groups
+## Customize the YAML file to define entity groups
 
 Example for usage in configuration.yaml:
 ```yaml
@@ -44,7 +46,8 @@ livingroom_compound:
     measure_temperature.temp3: sensor.livingroom_temperature_2
 ```
 
-##Set up a compound with entities
+## Set up a compound with entities
+
 The "livingroom_compound" will be the compound that gets importes to Homey.
 You can set a name that is used as device name. You can rename it in Homey.
 Add the capabilities. If you want to add more than one capability of the same type, you can use subcapabilities (capability.sub).
@@ -71,7 +74,8 @@ plug:
     measure_power: Power current
 ```
 
-##Set up a compound with entity attributes
+## Set up a compound with entity attributes
+
 In addition to entities, you can use attributes, too. 
 Just add the attribute to the entity id separated with a dot.
 ```yaml
@@ -92,7 +96,8 @@ This example creates a device tracker device. The first capability ist the entit
 In addition, some entity attributes are added as subcapability. Please ensure, that every defined capability is unique in the YAML. Use subcapabilities to define several string capabilities using the measure_generic capability.
 
 
-##Possible capabilities:
+## Possible capabilities:
+
 - onoff - Homey switch
 - button - Homey button
 - locked - lock state
@@ -135,7 +140,8 @@ In addition, some entity attributes are added as subcapability. Please ensure, t
 - meter_power
 - meter_rain
 
-##Use Icons
+## Use Icons
+
 You can set an icon for your compound device  (optional):
 ```yaml
 livingroom_compound:
@@ -166,7 +172,8 @@ Possible icons:
 - measure_voltage
 - meter_power
 
-##Use Units
+## Use Units
+
 You can set an unit for every capability (optional) using "capabilitiesUnits":
 ```yaml
 temperature:
@@ -186,7 +193,7 @@ temperature:
 This overwrites the unit which can be present in the HA entity.
 You can use this unit settings to define units for attributes, too.
 
-##References
+## References
 
 Homey app:
 https://homey.app/a/io.home-assistant.community/
