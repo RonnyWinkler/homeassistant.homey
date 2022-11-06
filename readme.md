@@ -25,7 +25,7 @@ Restart HomeAssistant after YAML changes.
 
 ## Customize the YAML file to define entity groups
 
-Example for usage in configuration.yaml:
+Example for usage in configuration.yaml. Start with the homey element followed by the compound element:
 ```yaml
 homey:
   livingroom_compound:
@@ -36,7 +36,7 @@ homey:
       measure_temperature.temp3: sensor.livingroom_temperature_2
 ```
 
-Example for usage in homey.yaml:
+Example for usage in homey.yaml. Start with the compound element:
 ```yaml
 livingroom_compound:
   name: Livingroom environment
