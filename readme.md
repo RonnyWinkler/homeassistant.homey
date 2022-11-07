@@ -107,7 +107,8 @@ my_number_device:
   capabilitiesConverters:
     dim: 
       from: (state) => { return parseFloat(state) * 0.01; }
-      to: (value) => { return value * 100; }```
+      to: (value) => { return value * 100; }
+```
 
 
 ## Possible capabilities:
