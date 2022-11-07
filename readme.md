@@ -95,6 +95,20 @@ my_device_tracker:
 This example creates a device tracker device. The first capability ist the entity itself. As value, the entity state is used.
 In addition, some entity attributes are added as subcapability. Please ensure, that every defined capability is unique in the YAML. Use subcapabilities to define several string capabilities using the measure_generic capability.
 
+## Use a slider for number input entities
+
+You can use a Homey DIM capability to create a slider. This slider can control a HA number input entity.
+A dim slider uses a range from 0 (0%) to 1 (100%). To adjust the slider value according to your wished input number value range, you can define a converter calculation.
+```yaml
+my_number_device:
+  name: Nubmer in
+  capabilities:
+      dim: input_number.test_slider
+  capabilitiesConverters:
+    dim: 
+      from: (state) => { return parseFloat(state) * 0.01; }
+      to: (value) => { return value * 100; }```
+
 
 ## Possible capabilities:
 

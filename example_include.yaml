@@ -10,6 +10,7 @@ livingroom_sensor:
     alarm_contact: binary_sensor.toilet_door
     button: script.test
     onoff: switch.ventilation
+    dim: input_number.test_slider
   capabilitiesTitles:
     measure_temperature: "Temperature title"
     measure_temperature.temp1: "Temperature subcapability 1 title"
