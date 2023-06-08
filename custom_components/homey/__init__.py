@@ -34,8 +34,8 @@ CONFIG_SCHEMA = vol.Schema({
     })
 }, extra=vol.ALLOW_EXTRA)
 
-@asyncio.coroutine
-def async_setup(hass, config):
+#@asyncio.coroutine
+async def async_setup(hass, config):
     """Set up variables."""
     component = EntityComponent(_LOGGER, DOMAIN, hass)
 
@@ -54,7 +54,9 @@ def async_setup(hass, config):
 
         devices.append(Device(device_id, name, icon, capabilities, capabilitiesTitles, capabilitiesUnits, capabilitiesConverters))
 
-    yield from component.async_add_entities(devices)
+#    yield from component.async_add_entities(devices)
+    await component.async_add_entities(devices)
+
     return True
 
 class Device(Entity):
@@ -70,8 +72,8 @@ class Device(Entity):
         self._capabilitiesUnits = capabilitiesUnits
         self._capabilitiesConverters = capabilitiesConverters
 
-    @asyncio.coroutine
-    def async_added_to_hass(self):
+    #@asyncio.coroutine
+    async def async_added_to_hass(self):
         """Run when entity about to be added."""
         super().async_added_to_hass()
 
